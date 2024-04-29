@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "baseUrl": "./src",
+    "noImplicitAny": false,
+    "skipLibCheck": false,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "paths": {
+      "@/": ["*"],
+      "@models/*": ["models/*"],
+      "@kafka/*": ["kafka/*"],
+      "@configs/*": ["configs/*"],
+      "@common/*": ["common/*"],
+      "@decorators/*": ["common/decorators/*"],
+      "@functions/*": ["common/functions/*"],
+      "@structures/*": ["common/structure/*"],
+      "@constants": ["constants.ts"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
