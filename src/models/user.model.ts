@@ -7,6 +7,7 @@ export type UserDocument = Document & {
    Messages: number;
    xp: number;
    lvl: number;
+   money: number;
   };
 
 
@@ -36,6 +37,10 @@ voice: {
     type: Number,
     default:0,
   },
+  money:{
+    type: Number,
+    default:0,
+  }
 });
 
 export const UserModel = model<UserDocument>("users", UserSchema);
